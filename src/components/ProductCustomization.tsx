@@ -1,12 +1,20 @@
 import { useState } from "react";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "../store";
-import {cartActions, CartItem} from "../store/cartSlice.ts";
+import {cartActions, CartItem, CartItemOptions} from "../store/cartSlice.ts";
 import {v4 as uuidV4} from 'uuid';
+
+interface ProductState {
+    name: string;
+    basePrice: number;
+    image: string;
+    description: string;
+    options: CartItemOptions;
+}
 
 const ProductCustomization = () => {
     // Product state
-    const [product, setProduct] = useState({
+    const [product, setProduct] = useState<ProductState>({
         name: "The Noctura Pillow",
         basePrice: 99.99,
         image: "/api/placeholder/500/300",
@@ -54,7 +62,7 @@ const ProductCustomization = () => {
     };
 
     // Option selection handlers
-    const handleTemperatureChange = (value) => {
+    const handleTemperatureChange = (value: string | null) => {
         setProduct({
             ...product,
             options: {
@@ -74,7 +82,7 @@ const ProductCustomization = () => {
         });
     };
 
-    const handleFillingChange = (value) => {
+    const handleFillingChange = (value: string) => {
         setProduct({
             ...product,
             options: {
@@ -84,7 +92,7 @@ const ProductCustomization = () => {
         });
     };
 
-    const handleBeddingChange = (value) => {
+    const handleBeddingChange = (value: string) => {
         setProduct({
             ...product,
             options: {

@@ -7,7 +7,7 @@ interface ShoppingCartProps {
     onClose: () => void;
 }
 
-const ShoppingCart: React.FC<ShoppingCartProps> = ({onClose}) => {
+const ShoppingCart: React.FC<ShoppingCartProps> = () => {
     const cartItems = useSelector((state: RootState) => state.cart.items);
     const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
     const dispatch = useDispatch.withTypes<AppDispatch>()();
@@ -48,7 +48,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({onClose}) => {
                                     </div>
                                 </div>
                                 <div className="text-right">
-                                    <p className="font-medium"><span class="math-inline">{item.totalPrice.toFixed(2)}</span>
+                                    <p className="font-medium"><span className="math-inline">{item.totalPrice.toFixed(2)}</span>
                                     </p>
                                     <button
                                         onClick={() => handleRemoveItem(item.id)}
