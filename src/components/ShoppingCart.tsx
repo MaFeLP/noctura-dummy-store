@@ -1,13 +1,13 @@
 import React from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {cartActions} from '../store/cartSlice.ts';
 import {AppDispatch, RootState} from '../store';
 
 interface ShoppingCartProps {
-    onClose: () => void;
+    checkout: () => void;
 }
 
-const ShoppingCart: React.FC<ShoppingCartProps> = () => {
+const ShoppingCart: React.FC<ShoppingCartProps> = (props: { checkout: () => void, }) => {
     const cartItems = useSelector((state: RootState) => state.cart.items);
     const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
     const dispatch = useDispatch.withTypes<AppDispatch>()();
@@ -73,7 +73,8 @@ const ShoppingCart: React.FC<ShoppingCartProps> = () => {
                         >
                             Clear Cart
                         </button>
-                        <button className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">
+                        <button className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700"
+                                onClick={props.checkout}>
                             Checkout
                         </button>
                     </div>

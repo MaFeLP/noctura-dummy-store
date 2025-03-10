@@ -5,6 +5,7 @@ import ProductCustomization from './components/ProductCustomization';
 import CustomerReviews from './components/CustomerReviews';
 import {useState} from "react";
 import ShoppingCart from "./components/ShoppingCart.tsx";
+import Checkout from "./components/Checkout.tsx";
 
 function SPRouter(props: { page: string, handlePageChange: any }) {
     switch (props.page) {
@@ -12,8 +13,10 @@ function SPRouter(props: { page: string, handlePageChange: any }) {
             return <ProductCustomization />;
         case "cart":
             return (<>
-                <ShoppingCart onClose={() => {}} />
+                <ShoppingCart checkout={() => props.handlePageChange("checkout")}/>
             </>);
+        case "checkout":
+            return <Checkout/>;
         default:
             return (<>
                 <div className="flex flex-col md:flex-row gap-8">
