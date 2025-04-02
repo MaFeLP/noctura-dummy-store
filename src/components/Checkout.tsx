@@ -245,52 +245,58 @@ const CheckoutForm = () => {
                     </div>
                 </div>
 
-                <div className="mb-8">
-                    <h2 className="text-xl font-semibold mb-4 text-gray-700">Payment Method</h2>
-                    <div className="space-y-2">
-                        <div>
-                            <label className="flex items-center">
-                                <input
-                                    type="radio"
-                                    name="paymentMethod"
-                                    value="paypaypay"
-                                    checked={formData.paymentMethod === 'paypaypay'}
-                                    onChange={handleInputChange}
-                                    className="mr-2"
-                                    required
-                                />
-                                <span className="text-gray-700">PayPayPay</span>
-                            </label>
+                <div id="payment" className="flex flex-row">
+                    <div className="mb-8">
+                        <h2 className="text-xl font-semibold mb-4 text-gray-700">Payment Method</h2>
+                        <div className="space-y-2">
+                            <div>
+                                <label className="flex items-center">
+                                    <input
+                                        type="radio"
+                                        name="paymentMethod"
+                                        value="paypaypay"
+                                        checked={formData.paymentMethod === 'paypaypay'}
+                                        onChange={handleInputChange}
+                                        className="mr-2"
+                                        required
+                                    />
+                                    <span className="text-gray-700">PayPayPay</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label className="flex items-center">
+                                    <input
+                                        type="radio"
+                                        name="paymentMethod"
+                                        value="immediate-insolvency"
+                                        checked={formData.paymentMethod === 'immediate-insolvency'}
+                                        onChange={handleInputChange}
+                                        className="mr-2"
+                                    />
+                                    <span className="text-gray-700">Immediate Insolvency</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label className="flex items-center">
+                                    <input
+                                        type="radio"
+                                        name="paymentMethod"
+                                        value="disastercard"
+                                        checked={formData.paymentMethod === 'disastercard'}
+                                        onChange={handleInputChange}
+                                        className="mr-2"
+                                    />
+                                    <span className="text-gray-700">DisasterCard</span>
+                                </label>
+                            </div>
                         </div>
-                        <div>
-                            <label className="flex items-center">
-                                <input
-                                    type="radio"
-                                    name="paymentMethod"
-                                    value="immediate-insolvency"
-                                    checked={formData.paymentMethod === 'immediate-insolvency'}
-                                    onChange={handleInputChange}
-                                    className="mr-2"
-                                />
-                                <span className="text-gray-700">Immediate Insolvency</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label className="flex items-center">
-                                <input
-                                    type="radio"
-                                    name="paymentMethod"
-                                    value="disastercard"
-                                    checked={formData.paymentMethod === 'disastercard'}
-                                    onChange={handleInputChange}
-                                    className="mr-2"
-                                />
-                                <span className="text-gray-700">DisasterCard</span>
-                            </label>
-                        </div>
-                    </div>
 
-                    <PaymentType method={formData.paymentMethod}/>
+                        <PaymentType method={formData.paymentMethod}/>
+                    </div>
+                    <div className="grow"/>
+                    <div className="w-24">
+                        <img src="/img/untrusted.png" alt="untrusted shops logo"/>
+                    </div>
                 </div>
 
                 <div className="mb-8">

@@ -6,11 +6,13 @@ import CustomerReviews from './components/CustomerReviews';
 import {useState} from "react";
 import ShoppingCart from "./components/ShoppingCart.tsx";
 import Checkout from "./components/Checkout.tsx";
+import Shop from "./pages/Shop.tsx";
+import HomePage from "./pages/Homepage.tsx";
 
 function SPRouter(props: { page: string, handlePageChange: any }) {
     switch (props.page) {
         case "shop":
-            return <ProductCustomization />;
+            return <Shop/>;
         case "cart":
             return (<>
                 <ShoppingCart checkout={() => props.handlePageChange("checkout")}/>
@@ -20,11 +22,10 @@ function SPRouter(props: { page: string, handlePageChange: any }) {
         default:
             return (<>
                 <div className="flex flex-col md:flex-row gap-8">
-                    {/* Product Image and Info */}
                     <div className="md:w-1/2">
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <img
-                                src="/api/placeholder/500/300"
+                                src="/img/noctura%20pillow%202.png"
                                 alt="Noctura Pillow"
                                 className="w-full rounded-lg"
                             />
@@ -50,9 +51,14 @@ const App = () => {
         <div className="min-h-screen bg-gray-50">
             <Header handlePageChange={setPage}/>
 
-            <main className="container mx-auto py-8 px-4 min-h-[60vh]">
-                <SPRouter page={page} handlePageChange={setPage} />
-            </main>
+            {/* Add Homepage Component when page === 'Home' */}
+            {page === "home" && (
+                <HomePage/>
+            ) || (
+                <main className="container mx-auto py-8 px-4 min-h-[60vh]">
+                    <SPRouter page={page} handlePageChange={setPage}/>
+                </main>
+            )}
 
             <Footer />
         </div>
