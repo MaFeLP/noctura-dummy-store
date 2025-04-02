@@ -23,6 +23,19 @@ const CustomerReviews = () => {
                     <p className="text-gray-600">Love being able to warm up my pillow before bedtime using Siri shortcuts. The speaker could be better though.</p>
                     <p className="text-gray-500 text-sm mt-1">Michael T. - Verified Purchase</p>
                 </div>
+                <div className="border-b pb-4">
+                    <div className="flex items-center mb-1">
+                        <div className="flex text-yellow-400">
+                            ★★★★★
+                        </div>
+                        <span className="ml-2 font-medium">Comforting in Stressful Situations!</span>
+                    </div>
+                    <p className="text-gray-600">
+                        After I nearly crashed with an airplane and got shot in the jungle,
+                        the noctura pillow provided me with my well rested sleep!
+                    </p>
+                    <p className="text-gray-500 text-sm mt-1">Neil M. - Verified Purchase</p>
+                </div>
             </div>
         </div>
     );

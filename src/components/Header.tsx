@@ -7,7 +7,7 @@ function Header(props: { handlePageChange: (page: string) => void }) {
     const cartItems = useSelector((state: RootState) => state.cart.totalQuantity);
 
     return (
-        <nav className="bg-indigo-600 text-white p-4">
+        <nav className="text-white p-4 bg-noctura-blue">
             <div className="container mx-auto flex justify-between items-center">
                 <button className="flex flex-row items-center" onClick={() => props.handlePageChange("home")}>
                     <img className="text-xl max-w-10" width="1600" height="1600" src="/img/favicon.png" alt=""/>

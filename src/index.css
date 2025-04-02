@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+:root {
+    --noctura-blue: #01066c;
+}
+
+.bg-noctura-blue {
+    background-color: var(--noctura-blue);
+}
