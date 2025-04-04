@@ -47,7 +47,7 @@ const SPRouter: React.FunctionComponent<SPRouterProps> = (props: SPRouterProps) 
                     <div className="md:w-1/2">
                         <ProductCustomization setPage={props.handlePageChange}/>
 
-                        <CustomerReviews />
+                        <CustomerReviews isHomepage={false}/>
                     </div>
                 </div>
             </>);

@@ -1,4 +1,5 @@
 import {ChevronDown} from 'lucide-react';
+import CustomerReviews from "../components/CustomerReviews.tsx";
 
 export default function HomePage() {
     const scrollToContent = () => {
@@ -113,6 +114,11 @@ export default function HomePage() {
                         />
                     </div>
                 </div>
+            </section>
+
+            <section id="customer-reviews" className="bg-white p-12">
+                <h2 className="text-3xl font-bold mb-6">What our Customers Say</h2>
+                <CustomerReviews isHomepage={true}/>
             </section>
         </div>
     );

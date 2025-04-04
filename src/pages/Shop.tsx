@@ -25,7 +25,7 @@ const Shop: React.FunctionComponent<ShopProps> = (props: ShopProps) => {
             <div className="md:w-1/2">
                 <ProductCustomization setPage={props.setPage}/>
 
-                <CustomerReviews/>
+                <CustomerReviews isHomepage={false}/>
             </div>
         </div>
     </>);
