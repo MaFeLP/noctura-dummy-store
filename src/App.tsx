@@ -10,6 +10,7 @@ import Shop from "./pages/Shop.tsx";
 import HomePage from "./pages/Homepage.tsx";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AboutUs from "./pages/AboutUs.tsx";
 
 interface SPRouterProps {
     page: string;
@@ -26,6 +27,8 @@ const SPRouter: React.FunctionComponent<SPRouterProps> = (props: SPRouterProps) 
             </>);
         case "checkout":
             return <Checkout navigateHome={() => props.handlePageChange("home")}/>;
+        case "about":
+            return <AboutUs navigateHome={() => props.handlePageChange("home")}/>;
         default:
             return (<>
                 <div className="flex flex-col md:flex-row gap-8">
@@ -67,7 +70,7 @@ const App = () => {
                 </main>
             )}
 
-            <Footer />
+            <Footer setPage={setPage}/>
             <ToastContainer/>
         </div>
     );

@@ -25,8 +25,8 @@ function Header(props: { handlePageChange: (page: string) => void }) {
                 <div className="hidden md:flex md:flex-row md:space-x-4">
                     <button className="hover:text-indigo-200" onClick={() => props.handlePageChange("home")}>Home</button>
                     <button className="hover:text-indigo-200" onClick={() => props.handlePageChange("shop")}>Shop</button>
-                    <button className="hover:text-indigo-200" onClick={() => props.handlePageChange("about")}>About</button>
-                    <button className="hover:text-indigo-200" onClick={() => props.handlePageChange("contact")}>Contact</button>
+                    <button className="hover:text-indigo-200" onClick={() => props.handlePageChange("about")}>Contact
+                    </button>
                 </div>
                 <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium" onClick={() => props.handlePageChange("cart")}>
                     Cart ({ cartItems })

@@ -1,4 +1,11 @@
-const Footer = () => {
+import ContactOptions from "./ContactOptions.tsx";
+import React from "react";
+
+interface FooterProps {
+    setPage: (page: string) => void;
+}
+
+const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
     return (
         <footer className="text-white py-8 mt-12 bg-noctura-blue">
             <div className="container mx-auto px-4">
@@ -10,25 +17,17 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-bold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-indigo-300">About Us</a></li>
-                            <li><a href="#" className="hover:text-indigo-300">FAQ</a></li>
-                            <li><a href="#" className="hover:text-indigo-300">Shipping Policy</a></li>
-                            <li><a href="#" className="hover:text-indigo-300">Returns</a></li>
+                            <li><a href="#" className="hover:text-indigo-300" onClick={() => props.setPage('about')}>About
+                                Us</a></li>
+                            <li><a href="#" className="hover:text-indigo-300"
+                                   onClick={() => props.setPage('faq')}>FAQ</a></li>
+                            <li><a href="#" className="hover:text-indigo-300" onClick={() => props.setPage('shipping')}>Shipping
+                                Policy</a></li>
+                            <li><a href="#" className="hover:text-indigo-300"
+                                   onClick={() => props.setPage('return')}>Returns</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-                        <p><a className="hover:text-indigo-300" href="mailto:support@noctura-pillow.store">Email:
-                            support@noctura-pillow.store</a></p>
-                        <p><a className="hover:text-indigo-300" href="tel:+15550173">Phone (North America): +1 (555)
-                            0173</a></p>
-                        <p><a className="hover:text-indigo-300" href="tel:+4952116391643">Phone (Europe): +49 521
-                            16391643</a></p>
-                        <div className="flex space-x-4 mt-4">
-                            <a className="hover:text-indigo-300" href="https://www.instagram.com/noctura.pillow/">Instagram</a>
-                            <a className="hover:text-indigo-300" href="https://www.tiktok.com/@noctura.pillow">TikTok</a>
-                        </div>
-                    </div>
+                    <ContactOptions showSocialMedia={true} showHeader={true}/>
                 </div>
                 <div className="mt-8 pt-4 border-t border-gray-700 text-center">
                     <p>© 2025 Noctura Pillow. All rights reserved.</p>
