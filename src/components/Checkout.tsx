@@ -141,7 +141,7 @@ const CheckoutForm: React.FunctionComponent<CheckoutProps> = (props: CheckoutPro
         e.preventDefault();
         dispatch(cartActions.clearCart());
         const orderNumber = Math.floor(Math.random() * 1000000);
-        toast.success(`Order #${orderNumber} submitted successfully!`);
+        toast.success(`Order #${orderNumber} submitted successfully! Don't check your inbox, if you don't want to be disappointed!`);
         props.navigateHome();
     };
 
