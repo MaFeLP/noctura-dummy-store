@@ -44,7 +44,7 @@ const OrderSummary = (props: {
 
         <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 font-medium"
+            className="w-full bg-noctura-blue text-white py-3 rounded-lg hover:bg-blue-700 font-medium"
         >
             Complete Order
         </button>

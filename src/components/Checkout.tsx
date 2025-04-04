@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../store";
 import OrderSummary from "./OrderSummary.tsx";
 import PaymentType from "./PaymentType.tsx";
+import {cartActions} from "../store/cartSlice";
+import {toast} from "react-toastify";
 
 interface Coupon {
     type: "percent" | "const";
@@ -21,7 +23,11 @@ export interface CouponState {
     coupon: Coupon | null;
 }
 
-const CheckoutForm = () => {
+interface CheckoutProps {
+    navigateHome: () => void;
+}
+
+const CheckoutForm: React.FunctionComponent<CheckoutProps> = (props: CheckoutProps) => {
     const availableCoupons: AvailableCoupons = {
         'SAVE10': {type: "percent", value: 10},
         'WELCOME20': {type: "percent", value: 20},
@@ -59,6 +65,8 @@ const CheckoutForm = () => {
         }
         return total;
     });
+
+    const dispatch = useDispatch();
 
     // Handle input changes
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -131,11 +139,13 @@ const CheckoutForm = () => {
     // Handle form submission
     const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
-        alert('Order submitted! This is a fake checkout.');
+        dispatch(cartActions.clearCart());
+        const orderNumber = Math.floor(Math.random() * 1000000);
+        toast.success(`Order #${orderNumber} submitted successfully!`);
+        props.navigateHome();
     };
 
     // Render payment method specific fields based on selected payment method
-
     return (
         <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg">
             <h1 className="text-2xl font-bold mb-6 text-gray-800">Checkout</h1>

@@ -8,17 +8,24 @@ import ShoppingCart from "./components/ShoppingCart.tsx";
 import Checkout from "./components/Checkout.tsx";
 import Shop from "./pages/Shop.tsx";
 import HomePage from "./pages/Homepage.tsx";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function SPRouter(props: { page: string, handlePageChange: any }) {
+interface SPRouterProps {
+    page: string;
+    handlePageChange: (page: string) => void;
+}
+
+const SPRouter: React.FunctionComponent<SPRouterProps> = (props: SPRouterProps) => {
     switch (props.page) {
         case "shop":
-            return <Shop/>;
+            return <Shop setPage={props.handlePageChange}/>;
         case "cart":
             return (<>
                 <ShoppingCart checkout={() => props.handlePageChange("checkout")}/>
             </>);
         case "checkout":
-            return <Checkout/>;
+            return <Checkout navigateHome={() => props.handlePageChange("home")}/>;
         default:
             return (<>
                 <div className="flex flex-col md:flex-row gap-8">
@@ -35,7 +42,7 @@ function SPRouter(props: { page: string, handlePageChange: any }) {
 
                     {/* Product Customization and Reviews */}
                     <div className="md:w-1/2">
-                        <ProductCustomization />
+                        <ProductCustomization setPage={props.handlePageChange}/>
 
                         <CustomerReviews />
                     </div>
@@ -61,6 +68,7 @@ const App = () => {
             )}
 
             <Footer />
+            <ToastContainer/>
         </div>
     );
 };

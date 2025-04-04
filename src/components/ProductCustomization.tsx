@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "../store";
 import {cartActions, CartItem, CartItemOptions} from "../store/cartSlice.ts";
 import {v4 as uuidV4} from 'uuid';
+import {toast} from 'react-toastify';
 
 interface ProductState {
     name: string;
@@ -12,7 +13,11 @@ interface ProductState {
     options: CartItemOptions;
 }
 
-const ProductCustomization = () => {
+interface ProductCustomizationProps {
+    setPage: (page: string) => void;
+}
+
+const ProductCustomization: React.FunctionComponent<ProductCustomizationProps> = (props: ProductCustomizationProps) => {
     // Product state
     const [product, setProduct] = useState<ProductState>({
         name: "The Noctura Pillow",
@@ -126,8 +131,37 @@ const ProductCustomization = () => {
 
         // Dispatch the action to add the item to cart
         dispatch(cartActions.addItemToCart(cartItem));
-    };
 
+        // Show toast notification
+        toast.success(
+            <div>
+                <p>Item added to cart!</p>
+                <div className="flex space-x-2 mt-2">
+                    <button
+                        className="bg-noctura-blue text-white px-4 py-2 rounded"
+                        onClick={() => props.setPage('cart')}
+                    >
+                        Go to Cart
+                    </button>
+                    <button
+                        className="text-noctura-blue border-noctura-blue px-4 py-2 rounded"
+                        onClick={() => props.setPage('checkout')}
+                    >
+                        Checkout
+                    </button>
+                </div>
+            </div>,
+            {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            }
+        );
+    };
 
     return (
         <div className="bg-white p-6 rounded-lg shadow-md">

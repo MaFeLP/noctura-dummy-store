@@ -7,3 +7,11 @@
 .bg-noctura-blue {
     background-color: var(--noctura-blue);
 }
+
+.text-noctura-blue {
+    color: var(--noctura-blue);
+}
+
+.border-noctura-blue {
+    border-color: var(--noctura-blue);
+}

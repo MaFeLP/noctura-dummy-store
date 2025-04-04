@@ -1,8 +1,13 @@
 import ProductInfo from "../components/ProductInfo.tsx";
 import ProductCustomization from "../components/ProductCustomization.tsx";
 import CustomerReviews from "../components/CustomerReviews.tsx";
+import React from "react";
 
-const Shop = () => {
+interface ShopProps {
+    setPage: (page: string) => void;
+}
+
+const Shop: React.FunctionComponent<ShopProps> = (props: ShopProps) => {
     return (<>
         <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
@@ -18,7 +23,7 @@ const Shop = () => {
 
             {/* Product Customization and Reviews */}
             <div className="md:w-1/2">
-                <ProductCustomization/>
+                <ProductCustomization setPage={props.setPage}/>
 
                 <CustomerReviews/>
             </div>
