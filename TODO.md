@@ -1,13 +1,6 @@
-- [ ] Pages
-    - [ ] FAQ
-  - [ ] Shipping & Return Policy
-    - [ ] Page of all the social media videos
-
----
-
-## Influencer
-
-- MaiLab
-- Lernen im Schlaf: setzt sich dafür ein
-- "Studien belegen, dass" ==> wunderschöne graphen
-- jung & target audience passt
+- [ ] Page of all the social media videos
+- [ ] More funny customer reviews
+- [x] Renders
+  - [ ] Main Home Page
+  - [ ] The other two bedding materials: bamboo, silk
+  - [ ] Ambient lighting: blue/orange (for cooler/heater)

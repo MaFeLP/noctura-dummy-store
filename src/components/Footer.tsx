@@ -1,5 +1,6 @@
 import ContactOptions from "./ContactOptions.tsx";
 import React from "react";
+import footerSlogans from "../data/slogans.json";
 
 interface FooterProps {
     setPage: (page: string) => void;
@@ -12,7 +13,9 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div>
                         <h3 className="text-lg font-bold mb-4">Noctura Pillow</h3>
-                        <p>Revolutionizing your sleep experience one night at a time.</p>
+                        <p>
+                            {footerSlogans[Math.floor(Math.random() * footerSlogans.length)]}
+                        </p>
                     </div>
                     <div>
                         <h3 className="text-lg font-bold mb-4">Quick Links</h3>
@@ -23,8 +26,6 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
                                    onClick={() => props.setPage('faq')}>FAQ</a></li>
                             <li><a href="#" className="hover:text-indigo-300" onClick={() => props.setPage('shipping')}>Shipping
                                 Policy</a></li>
-                            <li><a href="#" className="hover:text-indigo-300"
-                                   onClick={() => props.setPage('return')}>Returns</a></li>
                         </ul>
                     </div>
                     <ContactOptions showSocialMedia={true} showHeader={true}/>
