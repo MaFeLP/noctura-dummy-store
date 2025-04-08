@@ -38,44 +38,61 @@ export default function HomePage() {
             </div>
 
             <section id="feature-list" className="bg-white p-12">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-6">Features</h2>
-                    <div className="text-lg text-gray-700">
-                        Sleep isn’t just rest&mdash;it’s recovery, relaxation, and rejuvenation. The Noctura Pillow is
-                        designed to transform your nights with cutting-edge technology, all while maintaining the plush
-                        comfort you love.
-                        <br/><br/>
+                <div className="mx-auto flex flex-col md:flex-row items-center">
+                    <div className="md:w-1/3 mb-6 md:mb-0 md:mr-6">
+                        <img
+                            src="/img/cross_section.jpg"
+                            alt="Noctura Pillow Cross Section"
+                            className="w-full"
+                            width="2048"
+                            height="2048"
+                        />
+                    </div>
+                    <div className="md:w-2/3">
+                        <h2 className="text-3xl font-bold mb-6">Features</h2>
+                        <div className="text-lg text-gray-700">
+                            Sleep isn’t just rest&mdash;it’s recovery, relaxation, and rejuvenation. The Noctura Pillow
+                            is
+                            designed to transform your nights with cutting-edge technology, all while maintaining the
+                            plush
+                            comfort you love.
+                            <br/><br/>
 
-                        🔊 <b>Built-in Speaker System</b><br/>
-                        Immerse yourself in a world of sound without disturbing your partner. The seamlessly integrated
-                        speakers let you listen to music, white noise, or guided meditations&mdash;all while keeping the
-                        pillow soft and cozy.
-                        <br/><br/>
+                            🔊 <b>Built-in Speaker System</b><br/>
+                            Immerse yourself in a world of sound without disturbing your partner. The seamlessly
+                            integrated
+                            speakers let you listen to music, white noise, or guided meditations&mdash;all while keeping
+                            the
+                            pillow soft and cozy.
+                            <br/><br/>
 
-                        🌡️ <b>Heating & Cooling System</b><br/>
-                        No more flipping your pillow to find the perfect temperature. With customizable heating and
-                        cooling settings, the Noctura Pillow keeps you comfortable in every season.
-                        <br/><br/>
+                            🌡️ <b>Heating & Cooling System</b><br/>
+                            No more flipping your pillow to find the perfect temperature. With customizable heating and
+                            cooling settings, the Noctura Pillow keeps you comfortable in every season.
+                            <br/><br/>
 
-                        🗣️ <b>Siri Integration</b><br/>
-                        Need to set an alarm, play a podcast, or check the weather? Just ask. With built-in Siri
-                        support, your pillow listens, so you can stay relaxed and hands-free
+                            🗣️ <b>Siri Integration</b><br/>
+                            Need to set an alarm, play a podcast, or check the weather? Just ask. With built-in Siri
+                            support, your pillow listens, so you can stay relaxed and hands-free
 
-                        <br/><br/>
-                        <hr/>
-                        <br/>
+                            <br/><br/>
+                            <hr/>
+                            <br/>
 
-                        The Noctura Pillow represents the pinnacle of sleep technology, designed to provide the perfect
-                        night's sleep through customizable options and smart features. Our revolutionary design combines
-                        comfort with technology to enhance your sleep experience.
+                            The Noctura Pillow represents the pinnacle of sleep technology, designed to provide the
+                            perfect
+                            night's sleep through customizable options and smart features. Our revolutionary design
+                            combines
+                            comfort with technology to enhance your sleep experience.
 
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li>Ergonomic design for proper neck and spine alignment</li>
-                            <li>Hypoallergenic materials</li>
-                            <li>Easy to clean and maintain</li>
-                            <li>1-year warranty</li>
-                            <li>30-day satisfaction guarantee</li>
-                        </ul>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li>Ergonomic design for proper neck and spine alignment</li>
+                                <li>Hypoallergenic materials</li>
+                                <li>Easy to clean and maintain</li>
+                                <li>1-year warranty</li>
+                                <li>30-day satisfaction guarantee</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>

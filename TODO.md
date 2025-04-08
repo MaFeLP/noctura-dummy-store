@@ -1,10 +1,7 @@
-- [ ] Cross section of the pillow next to the features
 - [ ] Pages
     - [ ] FAQ
   - [ ] Shipping & Return Policy
     - [ ] Page of all the social media videos
-- [ ] Shop
-    - [ ] Carousel product images in product details
 
 ---
 
