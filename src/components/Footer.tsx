@@ -26,6 +26,8 @@ const Footer: React.FunctionComponent<FooterProps> = (props: FooterProps) => {
                                    onClick={() => props.setPage('faq')}>FAQ</a></li>
                             <li><a href="#" className="hover:text-indigo-300" onClick={() => props.setPage('shipping')}>Shipping
                                 Policy</a></li>
+                            <li><a href="#" className="hover:text-indigo-300"
+                                   onClick={() => props.setPage('social')}>Advertisements</a></li>
                         </ul>
                     </div>
                     <ContactOptions showSocialMedia={true} showHeader={true}/>

@@ -1,6 +1,5 @@
-- [ ] Page of all the social media videos
 - [ ] More funny customer reviews
-- [x] Renders
-  - [ ] Main Home Page
+- [ ] Renders
+  - [x] Main Home Page
   - [ ] The other two bedding materials: bamboo, silk
-  - [ ] Ambient lighting: blue/orange (for cooler/heater)
+  - [x] Ambient lighting: blue/orange (for cooler/heater)
