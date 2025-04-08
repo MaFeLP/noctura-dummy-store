@@ -4,7 +4,6 @@
   - [ ] Shipping & Return Policy
     - [ ] Page of all the social media videos
 - [ ] Shop
-    - [ ] Responsive on mobile
     - [ ] Carousel product images in product details
 
 ---

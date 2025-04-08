@@ -40,7 +40,7 @@ export default function HomePage() {
             <section id="feature-list" className="bg-white p-12">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-3xl font-bold mb-6">Features</h2>
-                    <p className="text-lg text-gray-700">
+                    <div className="text-lg text-gray-700">
                         Sleep isn’t just rest&mdash;it’s recovery, relaxation, and rejuvenation. The Noctura Pillow is
                         designed to transform your nights with cutting-edge technology, all while maintaining the plush
                         comfort you love.
@@ -76,7 +76,7 @@ export default function HomePage() {
                             <li>1-year warranty</li>
                             <li>30-day satisfaction guarantee</li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
             </section>
 

@@ -173,7 +173,7 @@ const ProductCustomization: React.FunctionComponent<ProductCustomizationProps> =
                 {/* Temperature Control */}
                 <div>
                     <h3 className="text-lg font-semibold mb-2">Temperature Control</h3>
-                    <div className="flex space-x-4">
+                    <div className="flex flex-wrap gap-4">
                         <button
                             className={`px-4 py-2 border rounded-md ${product.options.temperature === null ? 'bg-indigo-100 border-indigo-500' : 'bg-white'}`}
                             onClick={() => handleTemperatureChange(null)}
@@ -218,7 +218,7 @@ const ProductCustomization: React.FunctionComponent<ProductCustomizationProps> =
                 {/* Filling Type */}
                 <div>
                     <h3 className="text-lg font-semibold mb-2">Filling Type</h3>
-                    <div className="flex space-x-4">
+                    <div className="flex flex-wrap gap-4">
                         <button
                             className={`px-4 py-2 border rounded-md ${product.options.filling === "comfy" ? 'bg-indigo-100 border-indigo-500' : 'bg-white'}`}
                             onClick={() => handleFillingChange("comfy")}
@@ -243,7 +243,7 @@ const ProductCustomization: React.FunctionComponent<ProductCustomizationProps> =
                 {/* Bedding Material */}
                 <div>
                     <h3 className="text-lg font-semibold mb-2">Bedding Material</h3>
-                    <div className="flex space-x-4">
+                    <div className="flex flex-wrap gap-4">
                         <button
                             className={`px-4 py-2 border rounded-md ${product.options.bedding === "cotton" ? 'bg-indigo-100 border-indigo-500' : 'bg-white'}`}
                             onClick={() => handleBeddingChange("cotton")}
@@ -292,3 +292,4 @@ const ProductCustomization: React.FunctionComponent<ProductCustomizationProps> =
 };
 
 export default ProductCustomization;
+
