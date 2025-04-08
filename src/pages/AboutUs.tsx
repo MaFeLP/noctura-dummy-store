@@ -43,7 +43,7 @@ const ContactForm: React.FunctionComponent<AboutUsProps> = (props: AboutUsProps)
     };
 
     return (
-        <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+        <div className="max-w-2xl mx-auto p-6">
             <h1 className="text-2xl font-bold mb-6 text-gray-800">About Us</h1>
             <p className="mb-6 text-gray-700">
                 At Noctura Pillow, we are dedicated to providing the best sleep experience with our innovative pillow
@@ -98,6 +98,16 @@ const ContactForm: React.FunctionComponent<AboutUsProps> = (props: AboutUsProps)
             <div className="mt-8">
                 <h2 className="text-xl font-semibold mb-4 text-gray-800">Contact Options</h2>
                 <ContactOptions showSocialMedia={false} showHeader={false}/>
+            </div>
+
+            <hr className="my-8 border-t border-gray-300"/>
+
+            <div>
+                <p className="mb-2"><strong>Disclaimer:</strong> Noctura Pillow is not a real business. This website has
+                    been created solely for educational purposes as part of a school project.</p>
+                <p className="mb-2">No actual products are being sold, and no customer information is being collected,
+                    stored. All forms on this website do not work and the submitted data will <b>not</b> be sent to the
+                    server, or even processed.</p>
             </div>
         </div>
     );
